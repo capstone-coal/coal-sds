@@ -23,7 +23,8 @@ as this allows all data flowing into the SDS to be persisted into [Apache Solr](
 
 ## Deploy OODT
 ```  
-$ tar zxf distribution/target/${PROJECT_ARTIFACT_ID}-distribution-*-bin.tar.gz -C /my/deployment/directory/oodt
+$ mkdir /usr/local/coal-sds-deploy
+$ tar -zxvf distribution/target/coal-sds-distribution-*-bin.tar.gz -C /usr/local/coal-sds-deploy/
 ```  
   ---
   NOTE: For other build configurations, add the following arguments:
