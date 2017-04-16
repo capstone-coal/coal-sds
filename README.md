@@ -16,7 +16,7 @@ several components which when run as services, allow users to really explore COA
 
 ## Build OODT
 ```
-$ mvn clean package -Pfm-solr-catalog
+$ mvn clean package -Pfm-solr-catalog -DskipTests
 ```
 Typically efficient and effective cataloguing is achieved by passing the ```-Pfm-solr-catalog``` option 
 as this allows all data flowing into the SDS to be persisted into [Apache Solr](http://lucene.apache.org/solr).
