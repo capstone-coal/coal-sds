@@ -14,14 +14,14 @@ several components which when run as services, allow users to really explore COA
 
 # Installation
 
-## build oodt
+## Build OODT
 ```
 $ mvn clean package <OPTIONAL PROFILES> # see optional build profiles below
 ```
 Typically efficient and effective cataloguing is achieved by passing the ```-Pfm-solr-catalog``` option 
 as this allows all data flowing into the SDS to be persisted into [Apache Solr](http://lucene.apache.org/solr).
 
-## deploy oodt
+## Deploy OODT
 ```  
 $ tar zxf distribution/target/${PROJECT_ARTIFACT_ID}-distribution-*-bin.tar.gz -C /my/deployment/directory/oodt
 ```  
@@ -34,12 +34,8 @@ $ tar zxf distribution/target/${PROJECT_ARTIFACT_ID}-distribution-*-bin.tar.gz -
   -Pfm-solr-catalog   : default components, filemgr (Solr),
                         solr, tomcat/webapps/solr
 
-# Run
-```
-$ cd /my/deployment/directory/oodt
-$ cd bin
-$ ./oodt start
-```
+# Running
+See [Running COAL SDS](https://github.com/capstone-coal/coal-sds/wiki/Running-COAL-SDS)
 
 # License
 coal-sds is licensed permissively under the [Apache License v2.0](https://www.apache.org/licenses/LICENSE-2.0) 
