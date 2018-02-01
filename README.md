@@ -11,6 +11,7 @@ several components which when run as services, allow users to really explore COA
 # Requirements
 * Java Development Kit (JDK) 1.8+
 * JAVA_HOME set 
+* MAVEN and Prerequisite POM File
 
 # Installation
 
