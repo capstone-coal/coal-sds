@@ -42,7 +42,7 @@ the License.
 	    value="[PCS_HOME]/policy/pcs-workflow-statuses.xml"/>	    
 	 
 	<Parameter name="ganglia.url" value="[GANGLIA_URL]"/>
-	<Parameter name="contact.email" value="user@oodt.apache.org"/>
+	<Parameter name="contact.email" value="coal-capstone@googlegroups.com"/>
 
     <Parameter name="org.apache.oodt.pcs.trace.excludeList"
                value=""/>   
@@ -58,7 +58,7 @@ the License.
                         "classic"    => The original, OCO (Orbiting Carbon Observatory) skin for OPSUI
                 OR add your own!
         -->
-        <Parameter name="opsui.skin" value="cleanwhite"/>
+        <Parameter name="opsui.skin" value="navyblue"/>
         <Parameter name="opsui.homepage" value="org.apache.oodt.pcs.opsui.HomePage"/>
 
 </Context>
