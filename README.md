@@ -16,6 +16,9 @@ several components which when run as services, allow users to really explore COA
 # Installation
 
 ## Build OODT
+
+Place the complete coal-sds file inside of your EC2 instance.
+
 ```
 $ mvn clean package -Pfm-solr-catalog -DskipTests
 ```
