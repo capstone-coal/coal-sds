@@ -31,6 +31,8 @@ $ mkdir /usr/local/coal-sds-deploy
 $ tar -zxvf distribution/target/coal-sds-distribution-*-bin.tar.gz -C /usr/local/coal-sds-deploy/
 ```  
   ---
+  If you experience issues with permissions, you may need to include sudo in front of those commands. 
+  
   NOTE: For other build configurations, add the following arguments:
   (default)           : bin, crawler, data, extensions,
                         filemgr (Lucene), logs, pcs, resmgr,
