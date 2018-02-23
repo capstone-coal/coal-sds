@@ -41,8 +41,8 @@ $ tar -zxvf distribution/target/coal-sds-distribution-*-bin.tar.gz -C /usr/local
   -Pfm-solr-catalog   : default components, filemgr (Solr),
                         solr, tomcat/webapps/solr
 
-# Running
-See [Running COAL SDS](https://github.com/capstone-coal/coal-sds/wiki/Running-COAL-SDS)
+# Basic COAL-SDS File Management
+See [Basic File Management COAL SDS](https://github.com/capstone-coal/coal-sds/wiki/Basic-File-Management-in-COAL-SDS)
 
 # License
 coal-sds is licensed permissively under the [Apache License v2.0](https://www.apache.org/licenses/LICENSE-2.0) 
