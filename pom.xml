@@ -27,8 +27,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <oodt.version>1.2.1</oodt.version>
-    <oodt.pge.version>1.2.1</oodt.pge.version>
+    <oodt.version>1.2.2</oodt.version>
+    <oodt.pge.version>1.2.2</oodt.pge.version>
    <!-- Maven plugin dependencies -->
     <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
     <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
