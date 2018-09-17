@@ -19,16 +19,16 @@
 
   <groupId>com.github.capstone-coal</groupId>
   <artifactId>coal-sds</artifactId>
-  <name>Data Management System</name>
+  <name>coal-sds Data Management System</name>
   <packaging>pom</packaging>
-  <description>Data Management System Powered by Apache OODT delivered via RADiX</description>
+  <description>coal-sds Data Management System Powered by Apache OODT delivered via RADiX</description>
   <version>0.1</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <oodt.version>1.2.2</oodt.version>
-    <oodt.pge.version>1.2.2</oodt.pge.version>
+    <oodt.version>1.2.5</oodt.version>
+    <oodt.pge.version>1.2.5</oodt.pge.version>
    <!-- Maven plugin dependencies -->
     <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
     <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>

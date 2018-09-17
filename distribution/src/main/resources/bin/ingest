@@ -19,7 +19,7 @@ cd $DIR
 export DIR_PATH=`pwd`
 
 export FILEMGR_URL="http://localhost:9000"
-export OODT_HOME="/usr/local/coal-sds-deploy" 
+export OODT_HOME="/usr/local/coal-sds-deploy"
 
 if [ "$#" -ne 1 ]; then
    echo "Usage: $0 <dir>"
