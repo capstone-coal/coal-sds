@@ -31,6 +31,7 @@
    <packaging>pom</packaging>
    <properties>
       <tomcat.version>9.0.7</tomcat.version>
+      <wings.version>4.1-SNAPSHOT</wings.version>
    </properties>
    <profiles>
       <profile>
@@ -261,6 +262,18 @@
                <version>${project.parent.version}</version>
                <type>war</type>
             </dependency>
+            <dependency>
+               <groupId>edu.isi.wings</groupId>
+               <artifactId>wings-portal</artifactId>
+               <version>${wings.version}</version>
+               <type>war</type>
+            </dependency>
+            <dependency>
+               <groupId>edu.isi.wings</groupId>
+               <artifactId>wings-oodt-wmservices</artifactId>
+               <version>${wings.version}</version>
+               <type>war</type>
+            </dependency>
          </dependencies>
          <build>
             <plugins>
@@ -312,6 +325,20 @@
                                  <type>war</type>
                                  <overWrite>false</overWrite>
                                  <outputDirectory>${project.build.directory}/apache-tomcat-${tomcat.version}/webapps/solr</outputDirectory>
+                              </artifactItem>
+                              <artifactItem>
+                                 <groupId>edu.isi.wings</groupId>
+                                 <artifactId>wings-portal</artifactId>
+                                 <type>war</type>
+                                 <overWrite>false</overWrite>
+                                 <outputDirectory>${project.build.directory}/apache-tomcat-${tomcat.version}/webapps/wings-portal</outputDirectory>
+                              </artifactItem>
+                              <artifactItem>
+                                 <groupId>edu.isi.wings</groupId>
+                                 <artifactId>wings-oodt-wmservices</artifactId>
+                                 <type>war</type>
+                                 <overWrite>false</overWrite>
+                                 <outputDirectory>${project.build.directory}/apache-tomcat-${tomcat.version}/webapps/wings-oodt-wmservices</outputDirectory>
                               </artifactItem>
                            </artifactItems>
                         </configuration>

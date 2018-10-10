@@ -1,0 +1,3 @@
+[submodule "wings"]
+	path = wings
+	url = https://github.com/capstone-coal/wings
