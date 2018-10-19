@@ -65,11 +65,31 @@
       <groupId>org.apache.oodt</groupId>
       <artifactId>cas-filemgr</artifactId>
       <version>${oodt.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.apache.tika</groupId>
+          <artifactId>tika-core</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.apache.tika</groupId>
+          <artifactId>tika-parsers</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.oodt</groupId>
       <artifactId>pcs-core</artifactId>
       <version>${oodt.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tika</groupId>
+      <artifactId>tika-core</artifactId>
+      <version>${tika.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tika</groupId>
+      <artifactId>tika-parsers</artifactId>
+      <version>${tika.version}</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

@@ -73,7 +73,7 @@
       <artifactId>cas-resource</artifactId>
       <version>${oodt.version}</version>
     </dependency>
-       <dependency>
+    <dependency>
       <groupId>org.apache.oodt</groupId>
       <artifactId>cas-pge</artifactId>
       <version>${oodt.pge.version}</version>
@@ -86,8 +86,21 @@
           <groupId>org.apache.oodt</groupId>
           <artifactId>cas-crawler</artifactId>
         </exclusion>
+        <exclusion>
+          <groupId>org.apache.tika</groupId>
+          <artifactId>tika-core</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.apache.tika</groupId>
+          <artifactId>tika-parsers</artifactId>
+        </exclusion>
       </exclusions>
     </dependency> 
+    <dependency>
+      <groupId>org.apache.tika</groupId>
+      <artifactId>tika-core</artifactId>
+      <version>${tika.version}</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
