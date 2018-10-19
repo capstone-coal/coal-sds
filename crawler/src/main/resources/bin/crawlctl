@@ -15,4 +15,15 @@
 # under the License.    
 ##########################################################################
 
-java -Djava.util.logging.config.file=../etc/logging.properties -classpath "../lib/*" org.apache.oodt.cas.crawl.daemon.CrawlDaemonController $@
+#java -Djava.util.logging.config.file=../etc/logging.properties -classpath "../lib/*" org.apache.oodt.cas.crawl.daemon.CrawlDaemonController $@
+./crawler_launcher --filemgrUrl http://localhost:9000 \
+  --operation --launchMetCrawler \
+  --clientTransferer org.apache.oodt.cas.filemgr.datatransfer.LocalDataTransferFactory \
+  --productPath /usr/local/coal-sds-deploy/data/staging \
+  --metExtractor org.apache.oodt.cas.metadata.extractors.TikaCmdLineMetExtractor \
+  --metExtractorConfig /usr/local/coal-sds-deploy/data/met/tika.conf \
+  --failureDir /usr/local/coal-sds-deploy/data/failure \
+  --daemonPort 9003 \
+  --daemonWait 2 \
+  --successDir /usr/local/coal-sds-deploy/data/archive \
+  --actionIds DeleteDataFile
