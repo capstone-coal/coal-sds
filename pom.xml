@@ -29,7 +29,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <oodt.version>1.2.5</oodt.version>
     <oodt.pge.version>1.2.5</oodt.pge.version>
-    <tika.version>1.19.1</tika.version>
+    <tika.version>2.0.0-SNAPSHOT</tika.version>
    <!-- Maven plugin dependencies -->
     <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
     <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
