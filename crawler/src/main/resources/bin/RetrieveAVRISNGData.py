@@ -18,30 +18,38 @@ import os, sys, os.path
 
 def handleDownload(block):
     file.write(block)
-    print ".",
+    print (".")
 
-ddir='/Users/alexahuerta/Documents' # set to local path where you want files downloaded to
+
+ddir='/Users/Alex/Documents' # set to local path where you want files downloaded to
 os.chdir(ddir)
 ftp = FTP('avng.jpl.nasa.gov')
 
-print 'Logging in.'
+print ('Logging in.')
 ftp.login()
 directory = '/'
 
-flight_line = raw_input("Enter name of flight line you wish to download: ")
+#if flight name is not included in the command, prompt it
+if len(sys.argv) < 2:
+    flight_line = input("Enter name of flight line you wish to download: ")
+else:
+    flight_line = sys.argv[1]
+
 data2014 = '/AVNG_2014_data_distribution/L2/'
 data2015 = '/AVNG_2015_data_distribution/L2/'
+exists = False
 
 ftp.cwd(data2015)
 dirnames2015 = ftp.nlst()
 for dirname in dirnames2015:
     if dirname == flight_line:
-        print 'Changing to ' + dirname
+        exists = True
+        print ('Changing to ' + dirname)
         ftp.cwd(dirname)
         filenames = ftp.nlst() # get list of filenames in directory
-        print filenames
+        print (filenames)
         localpath = ddir + '/' + dirname
-        print localpath
+        print (localpath)
         os.mkdir(localpath) # create this directory locally
         #download each file to the newly created local directory
         for filename in filenames:
@@ -55,12 +63,13 @@ ftp.cwd(data2014)
 dirnames2014 = ftp.nlst()
 for dirname in dirnames2014:
     if dirname == flight_line:
-        print 'Changing to ' + dirname
+        exists = True
+        print ('Changing to ' + dirname)
         ftp.cwd(dirname)
         filenames = ftp.nlst() # get list of filenames in directory
-        print filenames
+        print (filenames)
         localpath = ddir + '/' + dirname
-        print localpath
+        print (localpath)
         os.mkdir(localpath) # create this directory locally
         #download each file to the newly created local directory
         for filename in filenames:
@@ -70,4 +79,6 @@ for dirname in dirnames2014:
             file.close()
         ftp.cwd('../..')
 
+if exists == False:
+    print('Could not locate file: ' + flight_line)
 ftp.quit()
