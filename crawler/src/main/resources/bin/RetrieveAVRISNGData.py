@@ -20,8 +20,7 @@ def handleDownload(block):
     file.write(block)
     print (".")
 
-
-ddir='/Users/Alex/Documents' # set to local path where you want files downloaded to
+ddir='/usr/local/coal-sds-deploy/data/staging' # set to local path where you want files downloaded to
 os.chdir(ddir)
 ftp = FTP('avng.jpl.nasa.gov')
 
