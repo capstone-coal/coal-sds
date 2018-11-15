@@ -30,6 +30,7 @@
     <oodt.version>1.2.5</oodt.version>
     <oodt.pge.version>1.2.5</oodt.pge.version>
     <tika.version>2.0.0-SNAPSHOT</tika.version>
+    <xerces.version>2.9.1</xerces.version>
    <!-- Maven plugin dependencies -->
     <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
     <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
