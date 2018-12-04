@@ -15,7 +15,72 @@
   limitations under the License.
 -->
 <cas:tasks xmlns:cas="http://oodt.jpl.nasa.gov/1.0/cas">
-<!--
-  TODO: Add some examples
--->
+  <!-- Mineral Classification Task - https://capstone-coal.github.io/docs#mineral -->
+  <task id="urn:oodt:PycoalMineralClassification" name="PycoalMineralClassification"
+    class="org.apache.oodt.cas.pge.StdPGETaskInstance">
+ 
+    <conditions/>
+ 
+    <configuration>
+      <property name="PGETask_Name" value="PycoalMineralClassification"/>
+      <property name="PGETask_ConfigFilePath" value="/usr/local/coal-sds-deploy/pge/policy/pycoal-mineral-pge-config.xml" envReplace="true"/>
+      <property name="PGETask_DumpMetadata" value="true"/>
+      <property name="PCS_WorkflowManagerUrl" value="http://localhost:9001" envReplace="true" />
+      <property name="PCS_FileManagerUrl"     value="http://localhost:9000" envReplace="true"/>
+      <property name="PCS_MetFileExtension" value="met"/>
+      <property name="PCS_ClientTransferServiceFactory" value="org.apache.oodt.cas.filemgr.datatransfer.LocalDataTransferFactory"/>
+      <property name="PCS_ActionRepoFile" value="file:///coal-sds-deploy/crawler/policy/crawler-config.xml" envReplace="true"/>
+    </configuration>
+ 
+    <requiredMetFields>
+      <metfield name="RunID"/>
+    </requiredMetFields>
+ 
+  </task>
+
+  <!-- Mining Identification Task - https://capstone-coal.github.io/docs#mining -->
+  <task id="urn:oodt:PycoalMiningIdentification" name="PycoalMiningIdentification"
+    class="org.apache.oodt.cas.pge.StdPGETaskInstance">
+ 
+    <conditions/>
+ 
+    <configuration>
+      <property name="PGETask_Name" value="PycoalMiningIdentification"/>
+      <property name="PGETask_ConfigFilePath" value="/usr/local/coal-sds-deploy/pge/policy/pycoal-mining-pge-config.xml" envReplace="true"/>
+      <property name="PGETask_DumpMetadata" value="true"/>
+      <property name="PCS_WorkflowManagerUrl" value="http://localhost:9001" envReplace="true" />
+      <property name="PCS_FileManagerUrl"     value="http://localhost:9000" envReplace="true"/>
+      <property name="PCS_MetFileExtension" value="met"/>
+      <property name="PCS_ClientTransferServiceFactory" value="org.apache.oodt.cas.filemgr.datatransfer.LocalDataTransferFactory"/>
+      <property name="PCS_ActionRepoFile" value="file:///coal-sds-deploy/crawler/policy/crawler-config.xml" envReplace="true"/>
+    </configuration>
+ 
+    <requiredMetFields>
+      <metfield name="RunID"/>
+    </requiredMetFields>
+ 
+  </task>
+
+  <!-- Environmental Correlation Task - https://capstone-coal.github.io/docs#environment -->
+  <task id="urn:oodt:PycoalEnvironmentalCorrelation" name="PycoalEnvironmentalCorrelation"
+    class="org.apache.oodt.cas.pge.StdPGETaskInstance">
+ 
+    <conditions/>
+ 
+    <configuration>
+      <property name="PGETask_Name" value="PycoalEnvironmentalCorrelation"/>
+      <property name="PGETask_ConfigFilePath" value="/usr/local/coal-sds-deploy/pge/policy/pycoal-environment-pge-config.xml" envReplace="true"/>
+      <property name="PGETask_DumpMetadata" value="true"/>
+      <property name="PCS_WorkflowManagerUrl" value="http://localhost:9001" envReplace="true" />
+      <property name="PCS_FileManagerUrl"     value="http://localhost:9000" envReplace="true"/>
+      <property name="PCS_MetFileExtension" value="met"/>
+      <property name="PCS_ClientTransferServiceFactory" value="org.apache.oodt.cas.filemgr.datatransfer.LocalDataTransferFactory"/>
+      <property name="PCS_ActionRepoFile" value="file:///coal-sds-deploy/crawler/policy/crawler-config.xml" envReplace="true"/>
+    </configuration>
+ 
+    <requiredMetFields>
+      <metfield name="RunID"/>
+    </requiredMetFields>
+ 
+  </task>
 </cas:tasks>

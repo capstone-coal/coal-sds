@@ -44,7 +44,7 @@ This file is used in the PCSHealthMonitor tool.
          monitor is running on.
      -->
 	<group name="CrawlerInfo">
-	    <scalar name="Crawler1">9020</scalar>
+	    <scalar name="TikaCmdLineMetExtractor Crawler">9003</scalar>
 	</group>
 
 </input>

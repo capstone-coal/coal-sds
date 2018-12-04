@@ -17,7 +17,7 @@ the License.
 -->
 <!-- FIXME: Change namespace URI? -->
 <cas:winstfields xmlns:cas="http://oodt.jpl.nasa.gov/1.0/cas">
-<default>
+<!--default>
   <field name="WorkflowInstId"/>
   <field name="TaskId"/>
   <field name="ProcessingNode"/>
@@ -29,8 +29,8 @@ the License.
   <field name="numSeconds"/>
   <field name="WorkflowInstId"/>
   <field name="ProcessingNode"/>
-</workflow>
-<!--
-  TODO: Add some documentation
--->
+</workflow-->
+	<workflow id="urn:oodt:PycoalWorkflow">
+		<field name="RunID"/>
+	</workflow>
 </cas:winstfields>

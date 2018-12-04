@@ -14,8 +14,10 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<cas:workflowevents xmlns:cas="http://oodt.jpl.nasa.gov/1.0/cas">
-  <event name="pycoal-pge">
-    <workflow id="urn:oodt:PycoalWorkflow"/>
-  </event>
-</cas:workflowevents>
+<cas:workflow xmlns:cas="http://oodt.jpl.nasa.gov/1.0/cas" name="PycoalWorkflow" id="urn:oodt:PycoalWorkflow">
+ <tasks>
+   <task id="urn:oodt:PycoalMineralClassification"/>
+   <task id="urn:oodt:PycoalMiningIdentification"/>
+   <task id="urn:oodt:PycoalEnvironmentalCorrelation"/>
+ </tasks>
+</cas:workflow>

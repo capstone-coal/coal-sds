@@ -253,7 +253,7 @@
             <bean class="org.apache.oodt.cas.crawl.cli.option.handler.CrawlerBeansPropHandler">
                 <property name="properties">
                     <list>
-                        <value>UpdateWorkflowStatusToIngest.workflowMgrUrl</value>
+                        <value>TriggerPostIngestWorkflow.workflowMgrUrl</value>
                     </list>
                 </property>
             </bean>

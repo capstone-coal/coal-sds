@@ -106,14 +106,14 @@ if [ "$1" = "start" ]; then
 # Print confirmation messages to the end user
 # FileManager
 # check if the PID file exists:
-  if [ ! -e "../filemgr/run/cas.filemgr.pid" ] 
+  if [ ! -e "$FILEMGR_HOME/run/cas.filemgr.pid" ] 
   then
     # no pid file was created by the process, it must have failed.
     echo -e 'Starting OODT File Manager [' $'\e[31m' 'Failed' $'\e[00m' ']'
 
   else
     # pid file exists, check if the associated process is running.
-    if kill -0 `cat ../filemgr/run/cas.filemgr.pid` > /dev/null 2>&1;
+    if kill -0 `cat "$FILEMGR_HOME"/run/cas.filemgr.pid` > /dev/null 2>&1;
     then
         echo -e 'Starting OODT File Manager [' $'\e[32m' 'Successful' $'\e[00m' ']'
     else
@@ -123,14 +123,14 @@ if [ "$1" = "start" ]; then
 
 # ResourceManager
 # check if the PID file exists:
-  if [ ! -e "../resmgr/run/cas.resmgr.pid" ]
+  if [ ! -e "$RESMGR_HOME/resmgr/run/cas.resmgr.pid" ]
   then
     # no pid file was created by the process, it must have failed.
     echo -e 'Starting OODT Resource Manager [' $'\e[31m' 'Failed' $'\e[00m' ']'
 
   else
     # pid file exists, check if the associated process is running.
-    if kill -0 `cat ../resmgr/run/cas.resmgr.pid` > /dev/null 2>&1;
+    if kill -0 `cat "$RESMGR_HOME"/run/cas.resmgr.pid` > /dev/null 2>&1;
     then
         echo -e 'Starting OODT Resource Manager [' $'\e[32m' 'Successful' $'\e[00m' ']'
     else
@@ -141,14 +141,14 @@ if [ "$1" = "start" ]; then
 
 # WorkflowManager
 # check if the PID file exists:
-  if [ ! -e "../workflow/run/cas.workflow.pid" ]
+  if [ ! -e "$WORKFLOW_HOME/run/cas.workflow.pid" ]
   then
     # no pid file was created by the process, it must have failed.
     echo -e 'Starting OODT Workflow Manager [' $'\e[31m' 'Failed' $'\e[00m' ']'
 
   else
     # pid file exists, check if the associated process is running.
-    if kill -0 `cat ../workflow/run/cas.workflow.pid` > /dev/null 2>&1;
+    if kill -0 `cat "$WORKFLOW_HOME"/run/cas.workflow.pid` > /dev/null 2>&1;
     then
         echo -e 'Starting OODT Workflow Manager [' $'\e[32m' 'Successful' $'\e[00m' ']'
     else

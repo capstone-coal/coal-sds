@@ -16,7 +16,8 @@
 ##########################################################################
 
 #java -Djava.util.logging.config.file=../etc/logging.properties -classpath "../lib/*" org.apache.oodt.cas.crawl.daemon.CrawlDaemonController $@
-./crawler_launcher --filemgrUrl http://localhost:9000 \
+./crawler/bin/crawler_launcher \
+  --filemgrUrl http://localhost:9000 \
   --operation --launchMetCrawler \
   --clientTransferer org.apache.oodt.cas.filemgr.datatransfer.LocalDataTransferFactory \
   --productPath /usr/local/coal-sds-deploy/data/staging \
@@ -26,4 +27,5 @@
   --daemonPort 9003 \
   --daemonWait 2 \
   --successDir /usr/local/coal-sds-deploy/data/archive \
-  --actionIds DeleteDataFile
+  --actionIds DeleteDataFile TriggerPostIngestWorkflow \
+  --workflowMgrUrl http://localhost:9001
